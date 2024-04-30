@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.replay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.videoPlayer {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding-bottom: 10px;
+}
+
+input {
+  width: 95%;
+}
+
+.controlButton  {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.controlButton:hover {
+    background-color: #242424;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  position: absolute; /* absolutne pozycjonowanie względem rodzica */
+  bottom: 0; /* dół kontenera */
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.5); /* lekko przezroczyste tło dla kontrolek */
+}
+
+select {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.fullScreen {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .videoContainer {
+    max-width: 90%;
+  }
+}
